@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificador</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/codificador.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Codificador</h1>
+    </header>
+    <main>
+      <form class="formulario">
+        <div class="codigo_rango">
+          <select name="codigo" id="tipo_codigo" required>
+            <option value="">--Escoge un Codigo--</option>
+            <option value="cesar">Codigo Caesar</option>
+            <option value="base64">Base 64</option>
+          </select>
+          <input
+            class="none"
+            type="range"
+            name="rango"
+            id="rango_cesar"
+            min="1"
+            max="26"
+            value="1"
+          />
+          <label class="none" for="range" id="rango_cesar_label">1</label>
+        </div>
+        <fieldset class="accion">
+          <legend>Codificar ou descodificar</legend>
+
+          <input
+            type="radio"
+            id="codificar"
+            name="codificar"
+            value="c"
+            checked
+          />
+          <label for="codificar">Codificar</label><br />
+
+          <input type="radio" id="descodificar" name="codificar" value="d" />
+          <label for="descodificar">Descodificar</label><br />
+        </fieldset>
+
+        <div class="container">
+          <textarea
+            name="texto"
+            id="texto"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input type="submit" value="Traducir" id="boton_traducir" />
+          <textarea
+            readonly
+            name="texto_traducido"
+            id="texto_traducido"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+      </form>
+    </main>
+    <script src="js/codificador.js" type="module"></script>
+  </body>
+</html>
