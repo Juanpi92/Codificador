@@ -1,3 +1,4 @@
+import { Codificar_base64, Descodificar_base64 } from "./base64.js";
 import { Codificar_Cesar, Descodificar_Cesar } from "./cifrado_cesar.js";
 
 const $formulario = document.querySelector(".formulario");
@@ -46,6 +47,18 @@ document.addEventListener("submit", (event) => {
         break;
     }
   } else {
-    //si escogio cifrado base64
+    //Escogio base 64
+    switch (accion) {
+      case "c":
+        let texto_cifrado = Codificar_base64(texto);
+        $texto2.textContent = texto_cifrado;
+        break;
+      case "d":
+        let texto_descifrado = Descodificar_base64(texto);
+        $texto2.textContent = texto_descifrado;
+        break;
+      default:
+        break;
+    }
   }
 });
