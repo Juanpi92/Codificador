@@ -16,17 +16,21 @@ $rango_cesar.addEventListener("change", () => {
 
 //Aparecer o desaparecer el rango en funcion de lo escogido
 $tipo_codigo.addEventListener("change", () => {
+  $tipo_codigo.classList.remove("error_cadena");
   if ($tipo_codigo.value === "cesar") {
     $rango_cesar.classList.remove("none");
     $rango_cesar_label.classList.remove("none");
-  } else {
+  } else if ($tipo_codigo.value === "base64") {
     $rango_cesar.classList.add("none");
     $rango_cesar_label.classList.add("none");
+  } else {
+    /*$tipo_codigo.classList.add("error_cadena");*/
   }
 });
 
 //Boton traducir ejecucion
 document.addEventListener("submit", (event) => {
+  document.querySelector("#texto2").classList.remove("error_cadena");
   event.preventDefault(); //prevengo el envio del formulario
   let texto = document.querySelector("#texto").value; //recojo el texto
   let $texto2 = document.querySelector("#texto2"); //Escojo el 2do textArea

@@ -37,6 +37,10 @@ header h1 {
   align-items: center;
 }
 #tipo_codigo {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: var(--main_color);
+  padding: 5px;
   margin: 10px;
   font-size: 1.2rem;
   color: #000;
@@ -45,11 +49,12 @@ header h1 {
   cursor: pointer;
 }
 textarea {
+  font-size: 1rem;
   width: 90%;
   max-width: 680px;
   margin: 20px;
   min-width: 280px;
-  border: 1px solid black;
+  border: 1px solid var(--main_color);
   border-radius: 10px;
   resize: none;
 }
@@ -87,7 +92,7 @@ textarea {
 .accion legend {
   background-color: var(--main_color);
   font-size: 1.2rem;
-  padding: 3px 6px;
+  padding: 5px 6px;
   margin: 0px auto;
 }
 .accion input {
@@ -98,6 +103,13 @@ textarea {
 }
 .active {
   display: block;
+}
+.error_cadena {
+  border: 2px solid red !important;
+}
+textarea[required]:invalid,
+#tipo_codigo[required]:invalid {
+  border: 2px solid red !important;
 }
 
 @media (min-width: 480px) {
