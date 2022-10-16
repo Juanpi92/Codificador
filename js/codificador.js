@@ -3,7 +3,7 @@ import { Codificar_Cesar, Descodificar_Cesar } from "./cifrado_cesar.js";
 
 const $formulario = document.querySelector(".formulario");
 const $texto = document.querySelector("#texto");
-$formulario.reset(); //inicializo todo
+$formulario.reset(); //inicializo todo el formulario
 
 const $rango_cesar = document.querySelector("#rango_cesar");
 const $rango_cesar_label = document.querySelector("#rango_cesar_label");
