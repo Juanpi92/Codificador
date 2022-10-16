@@ -40,6 +40,7 @@ export function Codificar_Cesar(texto, indice) {
   }
   return texto_codificado;
 }
+
 export function Descodificar_Cesar(texto, indice) {
   //Letras Mayusculas van de 65-90 y las minusculas de 97-122
   let codigo_caracter;
