@@ -16,9 +16,9 @@
       <form class="formulario">
         <div class="codigo_rango">
           <select name="codigo" id="tipo_codigo" required>
-            <option value="">--Escoge un Codigo--</option>
-            <option value="cesar">Codigo Caesar</option>
-            <option value="base64">Base 64</option>
+            <option class="opcion" value="">--Escolha um código--</option>
+            <option class="opcion" value="cesar">Codigo Cesar</option>
+            <option class="opcion" value="base64">Base 64</option>
           </select>
           <input
             class="none"
@@ -32,18 +32,22 @@
           <label class="none" for="range" id="rango_cesar_label">1</label>
         </div>
         <fieldset class="accion">
-          <legend>Codificar ou descodificar</legend>
+          <legend>Codificar ou decodificar</legend>
 
           <input
             type="radio"
             id="codificar"
             name="codificar"
-            value="c"
+            value="Codificar"
             checked
           />
           <label for="codificar">Codificar</label><br />
-
-          <input type="radio" id="descodificar" name="codificar" value="d" />
+          <input
+            type="radio"
+            id="descodificar"
+            name="codificar"
+            value="Decodificar"
+          />
           <label for="descodificar">Descodificar</label><br />
         </fieldset>
 
@@ -55,7 +59,7 @@
             rows="10"
             required
           ></textarea>
-          <input type="submit" value="Traducir" id="boton_traducir" />
+          <input type="submit" value="Codificar" id="boton_traducir" />
           <textarea
             readonly
             name="texto_traducido"

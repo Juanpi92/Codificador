@@ -3,7 +3,7 @@ export function Codificar_base64(texto) {
     return window.btoa(unescape(encodeURIComponent(texto)));
   } catch (error) {
     document.querySelector("#texto2").classList.add("error_cadena");
-    return "No se pudo codificar, introduzca una cadena valida";
+    return "Não foi possível codificar, insira um texto válido";
   }
 }
 
@@ -12,6 +12,6 @@ export function Descodificar_base64(texto) {
     return decodeURIComponent(escape(window.atob(texto)));
   } catch (error) {
     document.querySelector("#texto2").classList.add("error_cadena");
-    return "No se pudo descodificar, introduzca una cadena valida";
+    return "Não foi possível decodificar, insira um texto válido";
   }
 }

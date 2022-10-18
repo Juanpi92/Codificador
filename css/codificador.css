@@ -7,7 +7,7 @@
 body {
   background: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9)),
     url("/img/background.jpg");
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -45,6 +45,14 @@ header h1 {
   font-size: 1.2rem;
   color: #000;
 }
+.opcion {
+  background-color: #f7df1e;
+  color: #000;
+}
+.opcion:hover {
+  background-color: #222222d9;
+  color: #f7df1e;
+}
 #rango_cesar {
   cursor: pointer;
 }
@@ -68,8 +76,6 @@ textarea {
   margin: 0px auto;
 }
 #boton_traducir {
-  width: 120px;
-  min-width: 120px;
   background-color: var(--main_color);
   border: 1px solid black;
   border-radius: 10px;
