@@ -7,7 +7,7 @@
 body {
   background: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9)),
     url("/img/background.jpg");
-  height: 100%;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -117,6 +117,81 @@ textarea[required]:invalid,
 #tipo_codigo[required]:invalid {
   border: 2px solid red !important;
 }
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: #222222d9;
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  justify-items: center;
+}
+.modal img {
+  width: 330px;
+  margin: 10px auto;
+  border: 2px solid #f7df1e;
+  border-radius: 10px;
+}
+.modal .cesar img {
+  margin-top: 55px;
+}
+.modal_active {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+.boton_menu {
+  height: 60px;
+  width: 60px;
+  z-index: 1000;
+  position: fixed;
+  bottom: 1vh;
+  right: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--main_color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+.bar1,
+.bar3 {
+  margin: 5px auto;
+  width: 70%;
+  background-color: black;
+  height: 8px;
+  border-radius: 20px;
+  pointer-events: none;
+  display: none;
+}
+.bar2 {
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: none;
+  display: block;
+}
+.close .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+  display: block;
+}
+.close .bar2 {
+  display: none;
+}
+.close .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+  display: block;
+}
 
 @media (min-width: 480px) {
   .codigo_rango {
@@ -126,5 +201,18 @@ textarea[required]:invalid,
 @media (min-width: 680px) {
   .container {
     flex-direction: row;
+  }
+  .modal img {
+    width: 530px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .modal img {
+    margin: 55px auto;
   }
 }

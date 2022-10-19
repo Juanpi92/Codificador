@@ -1,5 +1,6 @@
 import { Codificar_base64, Descodificar_base64 } from "./base64.js";
 import { Codificar_Cesar, Descodificar_Cesar } from "./cifrado_cesar.js";
+import Menu_Hamburger from "./menu_hamburguesa.js";
 
 const $formulario = document.querySelector(".formulario");
 const $texto = document.querySelector("#texto");
@@ -11,6 +12,8 @@ const $rango_cesar = document.querySelector("#rango_cesar");
 const $rango_cesar_label = document.querySelector("#rango_cesar_label");
 const $tipo_codigo = document.querySelector("#tipo_codigo");
 $rango_cesar_label.textContent = $rango_cesar.value; //Al inicio donde debe estar
+
+Menu_Hamburger(".boton_menu", ".modal");
 
 //Cambiar el valor del label al cambiar el rango
 $rango_cesar.addEventListener("change", () => {
