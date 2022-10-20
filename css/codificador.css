@@ -4,10 +4,13 @@
   --main_modal_color: #f7df1ed9;
   --second_modal_color: #222222d9;
 }
+html {
+  height: 100%;
+}
 body {
   background: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9)),
     url("/img/background.jpg");
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -118,13 +121,13 @@ textarea[required]:invalid,
   border: 2px solid red !important;
 }
 .modal {
-  height: 100vh;
-  width: 100%;
   background-color: #222222d9;
   z-index: 100;
   position: absolute;
   top: 0px;
   left: 0px;
+  right: 0px;
+  bottom: 0px;
   visibility: hidden;
   opacity: 0;
   display: none;
