@@ -8,6 +8,12 @@ html {
   height: 100%;
 }
 body {
+  background: -webkit-linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9)),
+    url("/img/background.jpg");
+  background: -o-linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9)),
+    url("/img/background.jpg");
+  background: -moz-linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9)),
+    url("/img/background.jpg");
   background: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9)),
     url("/img/background.jpg");
   height: 100%;
