@@ -22,6 +22,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-size: cover;
 }
 header {
   background-color: var(--main_color);
@@ -162,6 +163,8 @@ textarea[required]:invalid,
 }
 
 .boton_menu {
+  /*border: 2px solid #000;*/
+  box-shadow: 1px 1px 1px #999;
   height: 60px;
   width: 60px;
   z-index: 1000;
