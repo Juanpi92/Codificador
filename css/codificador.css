@@ -140,7 +140,7 @@ textarea[required]:invalid,
   transform: translate(0, -100%); /*Para que salga de arriba*/
   opacity: 0; /*Va a empezar invisible*/
   visibility: hidden;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
 }
 .modal_active {
   transform: translate(0, 0);
@@ -151,7 +151,7 @@ textarea[required]:invalid,
   justify-content: flex-start;
   align-items: center;
   justify-items: center;
-   transition: transform 0.5s ease, opacity 0.5s ease;
+   transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
 }
 .modal img {
   width: 330px;
