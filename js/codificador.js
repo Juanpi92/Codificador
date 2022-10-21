@@ -7,13 +7,12 @@ const $texto = document.querySelector("#texto");
 const $accion = document.querySelectorAll('input[name="codificar"]');
 const $boton = document.getElementById("boton_traducir");
 $formulario.reset(); //inicializo todo el formulario
-
 const $rango_cesar = document.querySelector("#rango_cesar");
 const $rango_cesar_label = document.querySelector("#rango_cesar_label");
 const $tipo_codigo = document.querySelector("#tipo_codigo");
 $rango_cesar_label.textContent = $rango_cesar.value; //Al inicio donde debe estar
 
-Menu_Hamburger(".boton_menu", ".modal");
+Menu_Hamburger(".boton_menu", ".modal", "#clipboard");
 
 //Cambiar el valor del label al cambiar el rango
 $rango_cesar.addEventListener("change", () => {

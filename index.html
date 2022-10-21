@@ -14,6 +14,9 @@
       <span class="bar2">🧐</span>
       <span class="bar3"></span>
     </div>
+    <div id="clipboard">
+      <span class="bar4">📋</span>
+    </div>
     <header>
       <h1>Codificador</h1>
     </header>
@@ -68,7 +71,11 @@
             rows="10"
             required
           ></textarea>
-          <input type="submit" value="Codificar" id="boton_traducir" />
+          <div>
+            <input type="submit" value="Codificar" id="boton_traducir" />
+            <!--  <input type="button" value="Copiar" id="copiar" />-->
+          </div>
+
           <textarea
             readonly
             name="texto_traducido"
